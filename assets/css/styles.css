@@ -381,3 +381,54 @@ section[id]{scroll-margin-top:88px}
 @media(max-width:620px){
   .hero{min-height:max(100svh,800px)}
 }
+
+/* LDR-WEB-003 · B01 — CTA de galerías + microajuste de contenido
+   Hace visible la acción de galería sin alterar la composición del portafolio.
+*/
+.project-view{
+  min-height:44px;
+  padding:10px 10px 10px 15px;
+  background:rgba(255,255,255,.96);
+  color:#0a0a0a;
+  border:1px solid rgba(255,255,255,.78);
+  box-shadow:0 8px 24px rgba(0,0,0,.24);
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:.095em;
+  gap:12px;
+  opacity:1;
+  transform:none;
+  backdrop-filter:blur(8px);
+}
+.project-view b{
+  width:25px;
+  height:25px;
+  display:grid;
+  place-items:center;
+  flex:0 0 25px;
+  border-radius:50%;
+  background:#0a0a0a;
+  color:#fff;
+  font-size:13px;
+  line-height:1;
+  transition:transform .25s ease,background .25s ease,color .25s ease;
+}
+.project-media:hover .project-view,.project-media:focus-visible .project-view{
+  background:#0a0a0a;
+  color:#fff;
+  border-color:#0a0a0a;
+}
+.project-media:hover .project-view b,.project-media:focus-visible .project-view b{
+  background:#fff;
+  color:#0a0a0a;
+  transform:translate(2px,-2px);
+}
+@media(max-width:620px){
+  .project-view{
+    left:14px;
+    bottom:14px;
+    min-height:46px;
+    padding:10px 10px 10px 14px;
+    font-size:10px;
+  }
+}
